@@ -27,5 +27,4 @@ public class Phone implements ContactData {
     public String getContactDataInfo() {
         return "phoneNumber='" + phoneNumber + '\'' + ", type=" + type + "\n";
     }
-
 }

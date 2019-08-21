@@ -20,5 +20,6 @@ public class Address implements ContactData {
                 "streetName='" + streetName + '\'' +
                 ", number=" + number +
                 ", city='" + city + '\'' +
-                ", postalCode=" + postalCode + "\n";    }
+                ", postalCode=" + postalCode + "\n";
+    }
 }

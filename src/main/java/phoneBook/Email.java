@@ -24,7 +24,8 @@ public class Email implements ContactData {
         this.type = type;
     }
 
-    public String getContactDataInfo() {
+    public String getContactDataInfo()
+    {
         return "Email: " +
                 "email='" + email + '\'' +
                 ", type=" + type + "\n";

@@ -41,6 +41,7 @@ public class Storage {
 
     public static void main(String[] args) throws InstanceAlreadyExistsException, IOException {
         AddressBook addressBook = new AddressBook();
+
         ArrayList<ContactData> contactData = new ArrayList<ContactData>();
         contactData.add(new Phone("0774845251",PhoneType.MOBILE));
         contactData.add(new Email("ion@yahoo.com", EmailType.HOME));

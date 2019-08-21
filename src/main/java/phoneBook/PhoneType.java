@@ -1,5 +1,5 @@
 package phoneBook;
 
 public enum PhoneType {
-    MOBILE, HOME, WORK, FAX
+    MOBILE, HOME, WORK
 }

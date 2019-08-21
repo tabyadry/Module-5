@@ -1,5 +1,5 @@
 package phoneBook;
 
 public enum EmailType {
-    HOME, WORK, OTHER
+    HOME, WORK, OTHER, PRIVATE
 }

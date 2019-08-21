@@ -20,9 +20,7 @@ public class Contact implements Serializable {
         }
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public void addContactData(ContactData contactData) {
         this.data.add(contactData);
