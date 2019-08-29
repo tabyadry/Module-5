@@ -1,10 +1,12 @@
 package phoneBook;
+
 import javax.management.InstanceAlreadyExistsException;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class AddressBook implements Serializable {
-    private ArrayList<Contact> contacts = new ArrayList<Contact>();
+    private List<Contact> contacts = new ArrayList<Contact>();
 
     public void add(Contact contact) throws InstanceAlreadyExistsException {
         if (find(contact.getName()) == null) {
@@ -15,13 +17,11 @@ public class AddressBook implements Serializable {
 
     public boolean delete(String name) {
         boolean deleted = false;
-        if (find(name) != null) {
-            for (int i = 0; i < contacts.size(); i++) {
-                if (contacts.get(i).getName().equals(name)) {
-                    contacts.remove(i);
-                    deleted = true;
-                    break;
-                }
+        for (int i = 0; i < contacts.size(); i++) {
+            if (contacts.get(i).getName().equals(name)) {
+                contacts.remove(i);
+                deleted = true;
+                break;
             }
         }
         return deleted;

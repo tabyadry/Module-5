@@ -6,16 +6,21 @@ import java.util.ArrayList;
 
 public class Storage {
 
-    public static boolean store(AddressBook addressBook) {
-        FileOutputStream fout = null;
+    public static boolean store(AddressBook addressBook) throws IOException {
+        ObjectOutputStream oos = null;
         try {
-            fout = new FileOutputStream("test.txt", false);
-            ObjectOutputStream oos = new ObjectOutputStream(fout);
+            FileOutputStream outputStream = new FileOutputStream("test.txt", false);
+            oos = new ObjectOutputStream(outputStream);
             oos.writeObject(addressBook);
             return true;
         } catch (IOException e) {
             e.printStackTrace();
             return false;
+        }
+        finally {
+            if(oos !=null){
+                oos.close();
+            }
         }
     }
 

@@ -3,17 +3,18 @@ package phoneBook;
 import javax.annotation.Nonnull;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Contact implements Serializable {
     private String name;
-    private ArrayList<ContactData> data;
+    private List<ContactData> data;
 
     public Contact(@Nonnull String name) {
         this.name = name;
         this.data = new ArrayList<ContactData>();
     }
 
-    public Contact(@Nonnull String name, @Nonnull ArrayList<ContactData> contactData) {
+    public Contact(@Nonnull String name, @Nonnull List<ContactData> contactData) {
         this(name);
         for (int i = 0; i < contactData.size(); i++) {
             data.add(contactData.get(i));
